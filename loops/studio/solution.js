@@ -15,7 +15,7 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
 
   /// Part A #2: Write a ``for`` loop inside this function
   /// Code your solution for part A #2 below this comment (and above the return statement) ... ///
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i <  numMeals; i++) {
     let meal = [];
     for (let j = 0; j < pantry.length; j++) {
         meal.push(pantry[j][i]);
@@ -72,8 +72,8 @@ function runProgram() {
     /// TEST PART C HERE ///
   /// UNCOMMENT the remaining commented lines and change the password1 and password2 strings to ensure your code is doing its job ///
 
-  let password1 = '';
-  let password2 = '';
+  let password1 = 'Dog';
+  let password2 = 'Bed';
   console.log("Time to run the password generator so we can update the menu tomorrow.")
   console.log(`The new password is: ${generatePassword(password1, password2)}`);
 }
