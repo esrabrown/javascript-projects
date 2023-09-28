@@ -89,3 +89,5 @@ module.exports = {
   generatePassword: generatePassword,
   runProgram: runProgram
 };
+
+runProgram();

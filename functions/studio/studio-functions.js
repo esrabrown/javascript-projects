@@ -9,6 +9,28 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+let variableName = "apple";
+let variableNum = 12345;
+
+function reverseCharacters(i) {
+    if (typeof(i) == "string") {
+        let lettersArray = i.split('');
+        let reversedLettersArray = lettersArray.reverse();
+        return reversedLettersArray.join('');
+    }
+    else if (typeof(i) == "number") {
+        let numbersString = i.toString();
+        let numbersArray = numbersString.split('');
+        let reversedArray = numbersArray.reverse();
+        let numbersString2 = reversedArray.join('');
+        return Number(numbersString2);
+    }
+ }
+ console.log(reverseCharacters(variableName));
+ console.log(reverseCharacters(variableNum));
+
+console.log(reverseCharacters('1234'));
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -16,6 +38,8 @@
 // 3. If typeof is ’number’, convert the parameter to a string, reverse the characters, then convert it back into a number.
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
+
+
 
 // Part Three: Complete Reversal
 
@@ -41,6 +65,21 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
+
+let testArray = ['hello','world','wall-e','1234'];
+
+ function completeReversal(n) {
+    let answer = [];
+
+    for (let x = n.length -1 ; x >= 0; x --) {
+        let switched = reverseCharacters(n[x]);
+        answer.push(switched);
+    }
+
+    return answer;
+}
+
+console.log(completeReversal(testArray));
 
 // Area of rectangle equal to length x width
 
